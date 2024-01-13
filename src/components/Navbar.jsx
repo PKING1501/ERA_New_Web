@@ -75,7 +75,7 @@ const Navbar = () => {
   } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
   onClick={(e) => {
     e.preventDefault();
-    setActive('projects');
+    setActive('team_history');
     const aboutSection = document.querySelector('#team_history');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
@@ -84,7 +84,7 @@ const Navbar = () => {
 >
   Team
 </a>
-<a
+{/* <a
   href="#projects"
   className={`${
     active === 'projects' ? 'text-french' : 'text-eerieBlack'
@@ -99,8 +99,17 @@ const Navbar = () => {
   }}
 >
   Projects
-</a>
-<a
+</a> */}
+<Link
+  to="/projects"
+  className={`${
+    active === 'projects' ? 'text-french' : 'text-eerieBlack'
+  } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+  onClick={() => setActive('projects')}
+>
+  Projects
+</Link>
+{/* <a
   href="#projects"
   className={`${
     active === 'research' ? 'text-french' : 'text-eerieBlack'
@@ -115,7 +124,16 @@ const Navbar = () => {
   }}
 >
   Research
-</a>
+</a> */}
+<Link
+  to="/research"
+  className={`${
+    active === 'research' ? 'text-french' : 'text-eerieBlack'
+  } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+  onClick={() => setActive('research')}
+>
+  Research
+</Link>
 <a
   href="#sponsors"
   className={`${

@@ -140,9 +140,31 @@ const Team_history = () => {
           variants={fadeIn('', '', 0.1, 1)}
           className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
             The team was founded under Prof. Laxmidhar Behera, currently the director of IIT Mandi, in 2018. We continue to work with faculty, our current advisor being Prof. Indranil Saha. Since our inception, we have grown in number and ability, undertaking various projects, participating in competitions, and demonstrating our research. To get to know the amazing people involved,
-            <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '15px' }}>
+            {/* <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '15px' }}>
            <CustomButton3/>
-           </div>
+           </div> */}
+          <a
+            href="https://www.dropbox.com/scl/fi/165w2ovsfg4wlif3zone6/Brochure.pdf?rlkey=wjhej532ayequjvny56ggnpjt&dl=0"
+            style={{
+              fontWeight: 'bold',
+              color: '#6194fb',
+              textDecoration: 'none',
+              transition: 'color 0.3s, transform 0.3s',
+              display: 'inline-block'
+            }}
+            target="_blank"
+            rel="noopener noreferrer"
+            onMouseOver={(e) => {
+              e.target.style.color = 'white';
+              e.target.style.transform = 'scale(1.1)';
+            }}
+            onMouseOut={(e) => {
+              e.target.style.color = '#6194fb';
+              e.target.style.transform = 'scale(1)';
+            }}
+            >
+              click here.
+          </a>
           </motion.p>
         </motion.div>
     </div>

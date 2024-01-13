@@ -6,8 +6,6 @@ import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
-import CustomButton from './Button_Brochure';
-import CustomButton1 from './Button_Pitch_deck';
 
 const ProjectCard = ({
   id,
@@ -133,13 +131,13 @@ const Projects = () => {
     <>
     {/* Projects Section */}
     
-    <div id='projects' className="-mt-[6rem]" style={{ marginBottom: '-18.29vh' }}>
-        <motion.div variants={textVariant()}>
-          <p className={`${styles.sectionSubText} `}>Accomplishments</p>
+    <div id='projects' className={`-mt-[6rem]`} style={{marginTop: '-20vh' }}>
+        <motion.div variants={textVariant()} className={`${styles.textCenter} flex-col`} >
+          <p className={`${styles.sectionSubText}`}>Accomplishments</p>
           <h2 className={`${styles.sectionHeadTextLight}`}>Projects</h2>
           <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+          className={`sm:text-[18px] text-[16px] text-taupe  tracking-wider font-poppins ml-2 ${styles.textCenter}`}>
           Before the RoboCup MSL, we worked on many self-projects and government-funded projects. We have also participated in international competitions and conferences that made us what we are today. Below are some notable projects and competitions we have undertaken and excelled at.
           </motion.p>
         </motion.div>
