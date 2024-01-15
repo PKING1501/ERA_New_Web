@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { Fragment, useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { Link } from 'react-router-dom';
@@ -7,6 +7,9 @@ import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 import CustomButton3 from './Button_TeamHistory';
+import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
+import { useEffect } from 'react';
+// import ArrowIcon from './ArrowIcon';
 
 const ProjectCard = ({
   id,
@@ -120,6 +123,11 @@ const Team_history = () => {
   // const initialActiveSponsorId = 'project-6'; // Change this to the actual ID of the IITK sponsor
   // const [activeSponsor, setActiveSponsor] = useState(initialActiveSponsorId);
 
+  useEffect(() => {
+    // Scroll to the top when the component mounts or the location changes
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const setActiveProjectCard = (projectId) => {
     setActiveProject(projectId);
   };
@@ -131,47 +139,59 @@ const Team_history = () => {
   return (
     <>
     {/* Projects Section */}
-    
-    <div id='team_history' className="-mt-[0rem]" style={{ marginBottom: '-6.29vh' }}>
-        <motion.div variants={textVariant()}>
-          {/* <p className={`${styles.sectionSubText} `}>Accomplishments</p> */}
-          <h2 className={`${styles.sectionHeadTextLight}`}>Team History and Composition</h2>
-          <motion.p
-          variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-            The team was founded under Prof. Laxmidhar Behera, currently the director of IIT Mandi, in 2018. We continue to work with faculty, our current advisor being Prof. Indranil Saha. Since our inception, we have grown in number and ability, undertaking various projects, participating in competitions, and demonstrating our research. To get to know the amazing people involved,
-            {/* <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '15px' }}>
-           <CustomButton3/>
-           </div> */}
-          <a
-            href="https://www.dropbox.com/scl/fi/165w2ovsfg4wlif3zone6/Brochure.pdf?rlkey=wjhej532ayequjvny56ggnpjt&dl=0"
-            style={{
-              fontWeight: 'bold',
-              color: '#6194fb',
-              textDecoration: 'none',
-              transition: 'color 0.3s, transform 0.3s',
-              display: 'inline-block'
-            }}
-            target="_blank"
-            rel="noopener noreferrer"
-            onMouseOver={(e) => {
-              e.target.style.color = 'white';
-              e.target.style.transform = 'scale(1.1)';
-            }}
-            onMouseOut={(e) => {
-              e.target.style.color = '#6194fb';
-              e.target.style.transform = 'scale(1)';
-            }}
-            >
-              click here.
-          </a>
-          </motion.p>
-        </motion.div>
-    </div>
-    
+    <Link to="/" style={{marginTop: '-39vh', top: '10px', marginLeft: '-5vh', position: 'absolute' }}>
+  <ArrowBackIosSharpIcon style={{ color: 'white' }} />
+</Link>
+
+    {/* <div className="absolute top-30 left-10 z-100">
+        <Link to="/">
+          <ArrowBackIosSharpIcon style={{ color: 'white' }} />
+        </Link>
+      </div> */}
+    <Fragment>
+      
+      <div id='team_history' className={`-mt-[6rem]`} style={{marginTop: '-30vh' }}>
+          <motion.div variants={textVariant()}>
+            {/* <p className={`${styles.sectionSubText} `}>Accomplishments</p> */}
+            <h2 className={`${styles.sectionHeadTextLight} ${styles.textCenter}`}>Team History and Composition</h2>
+            <motion.p
+            variants={fadeIn('', '', 0.1, 1)}
+            className={`${styles.textCenter} ml-2 text-taupe sm:text-[18px] text-[16px] tracking-wider`}>
+              The team was founded under Prof. Laxmidhar Behera, currently the director of IIT Mandi, in 2018. We continue to work with faculty, our current advisor being Prof. Indranil Saha. Since our inception, we have grown in number and ability, undertaking various projects, participating in competitions, and demonstrating our research. To get to know the amazing people involved,
+              {/* <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '15px' }}>
+            <CustomButton3/>
+            </div> */}
+            <a
+              href="https://www.dropbox.com/scl/fi/165w2ovsfg4wlif3zone6/Brochure.pdf?rlkey=wjhej532ayequjvny56ggnpjt&dl=0"
+              style={{
+                fontWeight: 'bold',
+                color: '#6194fb',
+                textDecoration: 'none',
+                transition: 'color 0.3s, transform 0.3s',
+                display: 'inline-block'
+              }}
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseOver={(e) => {
+                e.target.style.color = 'white';
+                e.target.style.transform = 'scale(1.1)';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.color = '#6194fb';
+                e.target.style.transform = 'scale(1)';
+              }}
+              >
+                click here.
+            </a>
+            </motion.p>
+          </motion.div>
+      </div>
+      
+    </Fragment>
     </>
   );
 };
 
 export default SectionWrapper(Team_history, 'team_history');
+
 

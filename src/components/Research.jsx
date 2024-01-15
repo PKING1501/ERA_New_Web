@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { Link } from 'react-router-dom';
@@ -7,6 +8,7 @@ import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
+import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
 // import CustomButton2 from './Button_Research';
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -142,6 +144,11 @@ const Research = () => {
   // const initialActiveSponsorId = 'project-6'; // Change this to the actual ID of the IITK sponsor
   // const [activeSponsor, setActiveSponsor] = useState(initialActiveSponsorId);
 
+  useEffect(() => {
+    // Scroll to the top when the component mounts or the location changes
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const setActiveProjectCard = (projectId) => {
     setActiveProject(projectId);
   };
@@ -153,7 +160,11 @@ const Research = () => {
   return (
     <>
     {/* Projects Section */}
-    
+    <div className="absolute top-10 left-5 z-50">
+      <Link to="/">
+        <ArrowBackIosSharpIcon style={{ color: 'white' }} />
+      </Link>
+    </div>
     <div id='projects' className={`-mt-[6rem]`} style={{marginTop: '-2vh' }}>
         <motion.div variants={textVariant()} className={`${styles.textCenter} flex-col`}>
           {/* <p className={`${styles.sectionSubText} `}>Accomplishments</p> */}

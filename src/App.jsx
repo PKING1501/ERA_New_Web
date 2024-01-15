@@ -22,6 +22,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/projects' element={<Projects/>}/>
+          <Route path='/team' element={<Team_History/>}/>
           <Route path='/research' element={<Research/>} />
         </Routes>
       </BrowserRouter>
@@ -40,7 +41,7 @@ const Home = () => (
           <div className="bg-about bg-cover bg-center bg-no-repeat">
             <About />
           </div>
-          <Team_History />
+          {/* <Team_History /> */}
           {/* <Projects /> */}
           {/* <Research /> */}
           <Sponsors/>

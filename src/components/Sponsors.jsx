@@ -134,12 +134,12 @@ const Sponsors = () => {
     {/* Sponsors Section */}
     <div id='projects' className="-mt-[-2rem]" style={{ marginBottom: '-18.29vh' }} >
         <motion.div variants={textVariant()}>
-          <p className={`${styles.sectionSubText} `}>Why Us</p>
-          <h2 className={`${styles.sectionHeadTextLight}`}>Our Sponsors</h2>
+          <p className={`${styles.sectionSubText} ${styles.textCenter} `}>Why Us</p>
+          <h2 className={`${styles.sectionHeadTextLight} ${styles.textCenter}`}>Our Sponsors</h2>
           <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-           We sincerely thank our sponsors for providing us with the facilities without which we would have been unable to continue doing what we love. We share a cordial partnership with our sponsors, and fostering these relations, which promote growth for all stakeholders, is our primary priority as a team. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          className={`mt-4 text-taupe text-[18px] ${styles.textCenter}`}>
+           We sincerely thank our sponsors for providing us with the facilities without which we would have been unable to continue doing what we love. We share a cordial partnership with our sponsors, and fostering these relations, which promote growth for<br/> all stakeholders, is our primary priority as a team. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
            <br/>
            <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '10px' }}>
            <CustomButton/>&nbsp;&nbsp;&nbsp; <CustomButton1/> 

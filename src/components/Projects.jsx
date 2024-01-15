@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { Link } from 'react-router-dom';
+import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
 import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
+import { useEffect } from 'react';
 
 const ProjectCard = ({
   id,
@@ -126,11 +128,19 @@ const Projects = () => {
   // const setActiveSponsorCard = (sponsorId) => {
   //   setActiveSponsor(sponsorId);
   // };
+  useEffect(() => {
+    // Scroll to the top when the component mounts or the location changes
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <>
     {/* Projects Section */}
-    
+    <div className="absolute top-10 left-5 z-50">
+      <Link to="/">
+        <ArrowBackIosSharpIcon style={{ color: 'white' }} />
+      </Link>
+    </div>
     <div id='projects' className={`-mt-[6rem]`} style={{marginTop: '-20vh' }}>
         <motion.div variants={textVariant()} className={`${styles.textCenter} flex-col`} >
           <p className={`${styles.sectionSubText}`}>Accomplishments</p>

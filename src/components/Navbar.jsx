@@ -68,7 +68,7 @@ const Navbar = () => {
 >
   About
 </a>
-<a
+{/* <a
   href="#team_history"
   className={`${
     active === 'team_history' ? 'text-french' : 'text-eerieBlack'
@@ -83,7 +83,16 @@ const Navbar = () => {
   }}
 >
   Team
-</a>
+</a> */}
+<Link
+  to="/team"
+  className={`${
+    active === 'team_history' ? 'text-french' : 'text-eerieBlack'
+  } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+  onClick={() => setActive('team_history')}
+>
+  Team
+</Link>
 {/* <a
   href="#projects"
   className={`${
