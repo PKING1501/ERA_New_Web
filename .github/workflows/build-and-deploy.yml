@@ -5,6 +5,7 @@ on:
 permissions:
   contents: write
   pages: write
+  id-token: write
 jobs:
   build:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
