@@ -3,11 +3,13 @@ import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { Link } from 'react-router-dom';
 import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
+
 import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 import { useEffect } from 'react';
+
 
 const ProjectCard = ({
   id,
@@ -136,6 +138,7 @@ const Projects = () => {
   return (
     <>
     {/* Projects Section */}
+
     <div className="absolute top-10 left-5 z-50">
     <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
       <ArrowBackIosSharpIcon style={{ color: 'white' }} />
@@ -148,6 +151,7 @@ const Projects = () => {
           <motion.p
           variants={fadeIn('', '', 0.1, 1)}
           className={`sm:text-[18px] text-[16px] text-taupe  tracking-wider font-poppins ml-2 ${styles.textCenter}`}>
+
           Before the RoboCup MSL, we worked on many self-projects and government-funded projects. We have also participated in international competitions and conferences that made us what we are today. Below are some notable projects and competitions we have undertaken and excelled at.
           </motion.p>
         </motion.div>

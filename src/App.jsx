@@ -13,6 +13,7 @@ import Sponsors from './components/Sponsors';
 import InstaHandle from './components/InstaHandle';
 import Research from './components/Research';
 import Team_History from './components/Team_History';
+
 import { Fragment } from 'react';
 
 const App = () => {

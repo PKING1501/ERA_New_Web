@@ -77,6 +77,39 @@ const Navbar = () => {
     e.preventDefault();
     setActive('sponsors');
     const aboutSection = document.querySelector('#sponsors');
+    
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+>
+  Projects
+</a>
+<a
+  href="#projects"
+  className={`${
+    active === 'research' ? 'text-french' : 'text-eerieBlack'
+  } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+  onClick={(e) => {
+    e.preventDefault();
+    setActive('research');
+    const aboutSection = document.querySelector('#research');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+>
+  Research
+</a>
+<a
+  href="#sponsors"
+  className={`${
+    active === 'sponsors' ? 'text-french' : 'text-eerieBlack'
+  } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+  onClick={(e) => {
+    e.preventDefault();
+    setActive('sponsors');
+    const aboutSection = document.querySelector('#sponsors');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -194,6 +227,7 @@ const Navbar = () => {
     e.preventDefault();
     setActive('contact');
     const aboutSection = document.querySelector('#contact');
+
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }

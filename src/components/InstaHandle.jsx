@@ -8,6 +8,7 @@ import { send, sendHover } from '../assets';
 import React,{ useEffect } from 'react';
 import './InstaHandle.css'
 
+
 const Insta = () => {
 
   useEffect(() => {
@@ -15,6 +16,7 @@ const Insta = () => {
   }, []); // Empty dependency array ensures the effect runs once
   // <div class="elfsight-app-bcdddf16-aa00-448f-8745-fb6762e5b41d" data-elfsight-app-lazy></div>
   <div class="elfsight-app-bcdddf16-aa00-448f-8745-fb6762e5b41d" data-elfsight-app-lazy></div>  
+  
   const formRef = useRef();
   const [form, setForm] = useState({
     name: '',
@@ -71,6 +73,7 @@ const Insta = () => {
     <>
     <div class='widget-hider1'></div>
     <div class='widget-hider2'></div>
+
     <div
         
       className="-mt-[0rem] xl:flex-col flex-col-reverse 

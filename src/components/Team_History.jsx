@@ -8,6 +8,7 @@ import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 import CustomButton3 from './Button_TeamHistory';
+
 import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
 import { useEffect } from 'react';
 import './InstaHandle.css'
@@ -125,6 +126,7 @@ const Team_history = () => {
   // const initialActiveSponsorId = 'project-6'; // Change this to the actual ID of the IITK sponsor
   // const [activeSponsor, setActiveSponsor] = useState(initialActiveSponsorId);
 
+
   useEffect(() => {
     // Scroll to the top when the component mounts or the location changes
     window.scrollTo(0, 0);
@@ -141,6 +143,7 @@ const Team_history = () => {
   return (
     <>
     {/* Projects Section */}
+
     <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
       <ArrowBackIosSharpIcon style={{ color: 'white' }} />
     </Link>
@@ -197,5 +200,3 @@ const Team_history = () => {
 };
 
 export default SectionWrapper(Team_history, 'team_history');
-
-

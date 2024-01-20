@@ -101,7 +101,9 @@ const About = () => {
           target="_blank"
           rel="noopener noreferrer"
           onMouseOver={(e) => {
+
             e.target.style.color = 'black';
+
             e.target.style.transform = 'scale(1.1)';
           }}
           onMouseOut={(e) => {

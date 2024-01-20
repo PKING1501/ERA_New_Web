@@ -32,6 +32,7 @@ const ServiceCard = ({ index, title, icon }) => {
   );
 };
 
+
 const ProjectCard = ({
   id,
   name,
@@ -148,7 +149,7 @@ const Research = () => {
     // Scroll to the top when the component mounts or the location changes
     window.scrollTo(0, 0);
   }, [location.pathname]);
-
+  
   const setActiveProjectCard = (projectId) => {
     setActiveProject(projectId);
   };
@@ -167,6 +168,7 @@ const Research = () => {
     </div>
     <div id='projects' style={{ position: 'relative', width: '80vw', marginLeft: '0vw', marginTop: '5vh' }}>
         <motion.div variants={textVariant()} className={`${styles.textCenter} flex-col`}>
+
           {/* <p className={`${styles.sectionSubText} `}>Accomplishments</p> */}
           <h2 className={`${styles.sectionHeadTextLight}`}>Research</h2>
           <motion.p
