@@ -2,6 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { Link } from 'react-router-dom';
+import InstaHandle from './InstaHandle';
 import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
@@ -9,6 +10,7 @@ import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 import CustomButton3 from './Button_TeamHistory';
 import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
 import { useEffect } from 'react';
+import './InstaHandle.css'
 // import ArrowIcon from './ArrowIcon';
 
 const ProjectCard = ({
@@ -139,9 +141,9 @@ const Team_history = () => {
   return (
     <>
     {/* Projects Section */}
-    <Link to="/" style={{marginTop: '-39vh', top: '10px', marginLeft: '-5vh', position: 'absolute' }}>
-  <ArrowBackIosSharpIcon style={{ color: 'white' }} />
-</Link>
+    <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
+      <ArrowBackIosSharpIcon style={{ color: 'white' }} />
+    </Link>
 
     {/* <div className="absolute top-30 left-10 z-100">
         <Link to="/">
@@ -150,7 +152,7 @@ const Team_history = () => {
       </div> */}
     <Fragment>
       
-      <div id='team_history' className={`-mt-[6rem]`} style={{marginTop: '-30vh' }}>
+      <div id='team_history' style={{position: 'absolute', width: '80vw',marginLeft: '-40vw' ,marginTop: '-30vh' }}>
           <motion.div variants={textVariant()}>
             {/* <p className={`${styles.sectionSubText} `}>Accomplishments</p> */}
             <h2 className={`${styles.sectionHeadTextLight} ${styles.textCenter}`}>Team History and Composition</h2>
@@ -185,8 +187,10 @@ const Team_history = () => {
             </a>
             </motion.p>
           </motion.div>
+        <div className='InstaHandle'>
+          <InstaHandle/>
+        </div>
       </div>
-      
     </Fragment>
     </>
   );

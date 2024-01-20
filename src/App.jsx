@@ -19,11 +19,13 @@ const App = () => {
   return (
     <Fragment>
       <BrowserRouter>
+      {/* <Navbar/> */}
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/projects' element={<Projects/>}/>
           <Route path='/team' element={<Team_History/>}/>
           <Route path='/research' element={<Research/>} />
+          <Route path='/learning' element={<Research/>}/>
         </Routes>
       </BrowserRouter>
     </Fragment>
@@ -56,7 +58,6 @@ const Home = () => (
             </div>
           </div> */}
           <div>
-            <InstaHandle/>
             <Contact />
           </div>
   </>

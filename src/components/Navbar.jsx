@@ -68,6 +68,22 @@ const Navbar = () => {
 >
   About
 </a>
+<a
+  href="#sponsors"
+  className={`${
+    active === 'sponsors' ? 'text-french' : 'text-eerieBlack'
+  } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+  onClick={(e) => {
+    e.preventDefault();
+    setActive('sponsors');
+    const aboutSection = document.querySelector('#sponsors');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }}
+>
+  Sponsors
+</a>
 {/* <a
   href="#team_history"
   className={`${
@@ -143,38 +159,32 @@ const Navbar = () => {
 >
   Research
 </Link>
-<a
-  href="#sponsors"
+
+{/* <a
+  href="/learning"
   className={`${
-    active === 'sponsors' ? 'text-french' : 'text-eerieBlack'
+    active === 'learning' ? 'text-french' : 'text-eerieBlack'
   } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
   onClick={(e) => {
     e.preventDefault();
-    setActive('sponsors');
-    const aboutSection = document.querySelector('#sponsors');
+    setActive('learning');
+    const aboutSection = document.querySelector('#learning');
     if (aboutSection) {
       aboutSection.scrollIntoView({ behavior: 'smooth' });
     }
   }}
 >
-  Sponsors
-</a>
-<a
-  href="#insta"
+  Learning
+</a> */}
+<Link
+  to="/learning"
   className={`${
-    active === 'insta' ? 'text-french' : 'text-eerieBlack'
+    active === 'learning' ? 'text-french' : 'text-eerieBlack'
   } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
-  onClick={(e) => {
-    e.preventDefault();
-    setActive('insta');
-    const aboutSection = document.querySelector('#insta');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }}
+  onClick={() => setActive('learning')}
 >
-  Insta
-</a>
+  Learning
+</Link>
 <a
   href="#contact"
   className={`${

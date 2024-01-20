@@ -137,11 +137,11 @@ const Projects = () => {
     <>
     {/* Projects Section */}
     <div className="absolute top-10 left-5 z-50">
-      <Link to="/">
-        <ArrowBackIosSharpIcon style={{ color: 'white' }} />
-      </Link>
+    <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
+      <ArrowBackIosSharpIcon style={{ color: 'white' }} />
+    </Link>
     </div>
-    <div id='projects' className={`-mt-[6rem]`} style={{marginTop: '-20vh' }}>
+    <div id='projects' style={{position: 'fixed' ,width: '80vw', marginLeft: '-40vw' ,marginTop: '-45vh' }}>
         <motion.div variants={textVariant()} className={`${styles.textCenter} flex-col`} >
           <p className={`${styles.sectionSubText}`}>Accomplishments</p>
           <h2 className={`${styles.sectionHeadTextLight}`}>Projects</h2>

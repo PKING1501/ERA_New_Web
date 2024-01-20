@@ -161,11 +161,11 @@ const Research = () => {
     <>
     {/* Projects Section */}
     <div className="absolute top-10 left-5 z-50">
-      <Link to="/">
+      <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
         <ArrowBackIosSharpIcon style={{ color: 'white' }} />
       </Link>
     </div>
-    <div id='projects' className={`-mt-[6rem]`} style={{marginTop: '-2vh' }}>
+    <div id='projects' style={{ position: 'relative', width: '80vw', marginLeft: '0vw', marginTop: '5vh' }}>
         <motion.div variants={textVariant()} className={`${styles.textCenter} flex-col`}>
           {/* <p className={`${styles.sectionSubText} `}>Accomplishments</p> */}
           <h2 className={`${styles.sectionHeadTextLight}`}>Research</h2>
@@ -197,7 +197,7 @@ const Research = () => {
             </a>
           </motion.p>
         </motion.div>
-      <div className="mt-200 flex flex-wrap gap-10" style={{marginTop: '10vh'}}>
+      <div className="mt-200 flex flex-wrap gap-10" style={{marginTop: '10vh', width: '80vw'}}>
       {services.map((service, index) => (
         <ServiceCard key={service.title} index={index} {...service} />
         ))}
