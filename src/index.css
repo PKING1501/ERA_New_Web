@@ -59,6 +59,9 @@
 }
 
 #projects {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   margin-left: -2px;
   font-size: 100px;
 }

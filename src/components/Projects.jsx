@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { Link } from 'react-router-dom';
+import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
+
 import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
-import CustomButton from './Button_Brochure';
-import CustomButton1 from './Button_Pitch_deck';
+import { useEffect } from 'react';
+
 
 const ProjectCard = ({
   id,
@@ -128,18 +130,28 @@ const Projects = () => {
   // const setActiveSponsorCard = (sponsorId) => {
   //   setActiveSponsor(sponsorId);
   // };
+  useEffect(() => {
+    // Scroll to the top when the component mounts or the location changes
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <>
     {/* Projects Section */}
-    
-    <div id='projects' className="-mt-[6rem]" style={{ marginBottom: '-18.29vh' }}>
-        <motion.div variants={textVariant()}>
-          <p className={`${styles.sectionSubText} `}>Accomplishments</p>
+
+    <div className="absolute top-10 left-5 z-50">
+    <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
+      <ArrowBackIosSharpIcon style={{ color: 'white' }} />
+    </Link>
+    </div>
+    <div id='projects' style={{position: 'fixed' ,width: '80vw', marginLeft: '-40vw' ,marginTop: '-45vh' }}>
+        <motion.div variants={textVariant()} className={`${styles.textCenter} flex-col`} >
+          <p className={`${styles.sectionSubText}`}>Accomplishments</p>
           <h2 className={`${styles.sectionHeadTextLight}`}>Projects</h2>
           <motion.p
           variants={fadeIn('', '', 0.1, 1)}
-          className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
+          className={`sm:text-[18px] text-[16px] text-taupe  tracking-wider font-poppins ml-2 ${styles.textCenter}`}>
+
           Before the RoboCup MSL, we worked on many self-projects and government-funded projects. We have also participated in international competitions and conferences that made us what we are today. Below are some notable projects and competitions we have undertaken and excelled at.
           </motion.p>
         </motion.div>
