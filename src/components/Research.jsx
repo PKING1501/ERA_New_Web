@@ -8,7 +8,7 @@ import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
-import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
+import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp';
 // import CustomButton2 from './Button_Research';
 
 const ServiceCard = ({ index, title, icon }) => {
