@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { Link } from 'react-router-dom';
-import ArrowBackIosSharpIcon from '@material-ui/icons/ArrowBackIosSharp';
+import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp'
 
 import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';

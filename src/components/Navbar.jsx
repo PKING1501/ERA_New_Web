@@ -68,7 +68,7 @@ const Navbar = () => {
 >
   About
 </a>
-<a
+{/* <a
   href="#sponsors"
   className={`${
     active === 'sponsors' ? 'text-french' : 'text-eerieBlack'
@@ -84,8 +84,8 @@ const Navbar = () => {
   }}
 >
   Projects
-</a>
-<a
+</a> */}
+{/* <a
   href="#projects"
   className={`${
     active === 'research' ? 'text-french' : 'text-eerieBlack'
@@ -100,7 +100,7 @@ const Navbar = () => {
   }}
 >
   Research
-</a>
+</a> */}
 <a
   href="#sponsors"
   className={`${
