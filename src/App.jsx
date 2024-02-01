@@ -7,7 +7,6 @@ import {
   Navbar,
   // Tech,
   Projects,
-  Particles,
 } from './components';
 import Sponsors from './components/Sponsors';
 import InstaHandle from './components/InstaHandle';
@@ -15,6 +14,7 @@ import Research from './components/Research';
 import Team_History from './components/Team_History';
 
 import { Fragment } from 'react';
+import { Particles } from './components/Particles';
 
 const App = () => {
   return (

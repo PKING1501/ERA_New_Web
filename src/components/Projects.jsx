@@ -2,14 +2,15 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { Link } from 'react-router-dom';
-import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp'
+// import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp'
 
 import { styles } from '../styles';
-import { github, pineapple, pineappleHover } from '../assets';
+import { github, pineapple, pineappleHover} from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 import { useEffect } from 'react';
-
+import { Particles } from '../components/Particles';
+import Navbar1 from './Navbar1';
 
 const ProjectCard = ({
   id,
@@ -138,15 +139,13 @@ const Projects = () => {
   return (
     <>
     {/* Projects Section */}
-
-    <div className="absolute top-10 left-5 z-50">
-    <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
-      <ArrowBackIosSharpIcon style={{ color: 'white' }} />
-    </Link>
+    <Particles/>
+    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
+      <Navbar1 />
     </div>
-    <div id='projects' style={{position: 'fixed' ,width: '80vw', marginLeft: '-40vw' ,marginTop: '-45vh' }}>
+    <div id='projects' style={{position: 'fixed' ,width: '80vw', marginLeft: '-40vw' ,marginTop: '-40vh' }}>
         <motion.div variants={textVariant()} className={`${styles.textCenter} flex-col`} >
-          <p className={`${styles.sectionSubText}`}>Accomplishments</p>
+          {/* <p className={`${styles.sectionSubText}`}>Accomplishments</p> */}
           <h2 className={`${styles.sectionHeadTextLight}`}>Projects</h2>
           <motion.p
           variants={fadeIn('', '', 0.1, 1)}
