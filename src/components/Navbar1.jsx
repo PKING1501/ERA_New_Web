@@ -13,10 +13,48 @@ const Navbar1 = () => {
   return (
     <nav
       className={`${styles.paddingX} w-full flex items-center py-2 fixed 
-      top-0 z-20 bg-flashWhite sm:opacity-[0.97] xxs:h-[12vh]`}>
-        <Link to="/" style={{ position: 'fixed', top: '3.5vh', left: '7.4vw', zIndex: '1000000' }}>
+      top-0 z-20 bg-flashWhite sm:opacity-[0.90] xxs:h-[12vh]`}>
+        <Link to="/" style={{ position: 'fixed', top: '3.5vh', left: '5vw', zIndex: '1000000' }}>
             <ArrowBackIosNewSharp style={{ color: 'black' }} />
         </Link>
+        <ul className="list-none hidden sm:flex flex-row gap-4 mt-2" style={{ position: 'fixed', left: '9vw', zIndex: '1000000' }}>
+          <Link
+            to="/team"
+            className={`${
+              active === 'team_history' ? 'text-french' : 'text-eerieBlack'
+            } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+            onClick={() => setActive('team_history')}
+          >
+            Team
+          </Link>
+          <Link
+            to="/projects"
+            className={`${
+              active === 'projects' ? 'text-french' : 'text-eerieBlack'
+            } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+            onClick={() => setActive('projects')}
+          >
+            Projects
+          </Link>
+          <Link
+            to="/research"
+            className={`${
+              active === 'research' ? 'text-french' : 'text-eerieBlack'
+            } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+            onClick={() => setActive('research')}
+          >
+            Research
+          </Link>
+          <Link
+            to="/learning"
+            className={`${
+              active === 'learning' ? 'text-french' : 'text-eerieBlack'
+            } hover:text-taupe text-[15px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+            onClick={() => setActive('learning')}
+          >
+            Learning
+          </Link>
+        </ul>
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto flex-row-reverse">
         <Link
           to="/"
@@ -25,6 +63,7 @@ const Navbar1 = () => {
             setActive('');
             window.scrollTo(0, 0);
           }}>
+              
         {/* <div style={{ right: 0 }}> */}
         <img
             src={logotext}
