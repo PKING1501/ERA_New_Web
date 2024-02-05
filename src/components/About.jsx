@@ -39,8 +39,8 @@ const About = () => {
         variants={fadeIn('', '', 0.2, 1)}
         className="mt-4 text-taupe text-[1.250rem] max-w-3xl leading-[1.875rem]">
           We are a team of <b>undergraduates</b> actively working with faculty and are dedicated to developing solutions to challenges in <b>autonomous robotics</b> and related domains. We develop cutting-edge robots aided by <b>research</b> and represent our university and nation in <b>international competitions</b> that see participants from prestigious colleges worldwide. We are working towards our first participation in the upcoming <b style={{ fontWeight: 'bold', color: '#6194fb' }}>(2024)</b> edition of the &nbsp; <a
-          href="https://www.dropbox.com/scl/fi/165w2ovsfg4wlif3zone6/Brochure.pdf?rlkey=wjhej532ayequjvny56ggnpjt&dl=0"
-          style={{
+            href='https://msl.robocup.org/'
+            style={{
             fontWeight: 'bold',
             color: '#6194fb',
             textDecoration: 'none',
@@ -80,16 +80,19 @@ const About = () => {
         3.  <b>Empowering Future Leaders</b>: Empower gifted students through invaluable guidance and mentorship, all while increasing your company's visibility among budding professionals.<br/>
         4.  <b>Digital Dominance</b>: Amplify your online presence across our website and social media channels, magnifying your outreach and forging connections with a broader audience, all through the influential network of Team ERA.
       </motion.p> */}
+      <br/>
+      <br/>
+      <br/>
     <div className="-mt-[-2rem]">
       <motion.div variants={textVariant()}>
         {/* <p className={styles.sectionSubText}>Introduction</p> */}
-        <h2 className={styles.sectionHeadText} style={{fontSize: '37px'}} >RoboCup MSL</h2>
+        <h2 className={`${styles.sectionHeadText1 }`} style={{fontSize: '30px'}}>RoboCup MSL</h2>
       </motion.div>
       <motion.p
         variants={fadeIn('', '', 0.2, 1)}
         className="mt-4 text-taupe text-[1.250rem] max-w-3xl leading-[1.875rem]">
-          RoboCup Middle Size League (MSL) is an international competition where teams of 5 fully autonomous robots play soccer with a regular-size FIFA soccer ball. The vision of the competition is to reach a level in autonomous robots where a team of fully autonomous robots can win against the most recent FIFA World Cup winner by the year 2050. We aim to be among the first entrants from India and not only compete but win as undergraduates against teams that comprise a significant number of PG members. This makes our campaign ever more challenging and drives us to work harder than ever. To know more about the competition and our latest work, &nbsp;&nbsp;
-          <a
+          RoboCup Middle Size League (MSL) is an international competition where teams of 5 fully autonomous robots play soccer with a regular-size FIFA soccer ball. The vision of the competition is to reach a level in autonomous robots where a team of fully autonomous robots can win against the most recent FIFA World Cup winner by the year 2050. We aim to be among the first entrants from India and not only compete but win as undergraduates against teams that comprise a significant number of PG members. This makes our campaign ever more challenging and drives us to work harder than ever.
+          {/* <a
           href="https://www.dropbox.com/scl/fi/165w2ovsfg4wlif3zone6/Brochure.pdf?rlkey=wjhej532ayequjvny56ggnpjt&dl=0"
           style={{
             fontWeight: 'bold',
@@ -112,7 +115,7 @@ const About = () => {
           }}
           >
              click here.
-        </a>
+        </a> */}
         {/* We are a team of undergraduates spanning from various majors and dedicated towards developing intelligent solutions for implementing autonomous robotics.  */}
 {/* <br/>What We <b>Offer</b>:<br/> */}
       </motion.p>
@@ -142,6 +145,7 @@ const About = () => {
       </div>
       
     </div>
+    <br/>
   </>
   );
 };

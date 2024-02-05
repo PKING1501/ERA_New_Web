@@ -3,13 +3,15 @@ import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { Link } from 'react-router-dom';
 import InstaHandle from './InstaHandle';
+import { Particles } from '../components/Particles';
 import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 import CustomButton3 from './Button_TeamHistory';
+import Navbar1 from './Navbar1';
 
-import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp';
+// import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp';
 import { useEffect } from 'react';
 import './InstaHandle.css'
 // import ArrowIcon from './ArrowIcon';
@@ -142,11 +144,15 @@ const Team_history = () => {
 
   return (
     <>
+    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
+      <Navbar1 />
+    </div>
+    <Particles/>
     {/* Projects Section */}
 
-    <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
+    {/* <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
       <ArrowBackIosSharpIcon style={{ color: 'white' }} />
-    </Link>
+    </Link> */}
 
     {/* <div className="absolute top-30 left-10 z-100">
         <Link to="/">
@@ -158,15 +164,15 @@ const Team_history = () => {
       <div id='team_history' style={{position: 'absolute', width: '80vw',marginLeft: '-40vw' ,marginTop: '-30vh' }}>
           <motion.div variants={textVariant()}>
             {/* <p className={`${styles.sectionSubText} `}>Accomplishments</p> */}
-            <h2 className={`${styles.sectionHeadTextLight} ${styles.textCenter}`}>Team History and Composition</h2>
+            <h2 className={`${styles.sectionHeadTextLight} ${styles.textCenter}`}>Meet Our Team</h2>
             <motion.p
             variants={fadeIn('', '', 0.1, 1)}
             className={`${styles.textCenter} ml-2 text-taupe sm:text-[18px] text-[16px] tracking-wider`}>
-              The team was founded under Prof. Laxmidhar Behera, currently the director of IIT Mandi, in 2018. We continue to work with faculty, our current advisor being Prof. Indranil Saha. Since our inception, we have grown in number and ability, undertaking various projects, participating in competitions, and demonstrating our research. To get to know the amazing people involved,
+              The team was founded under Prof. Laxmidhar Behera, currently the director of IIT Mandi, in 2018. We continue to work with faculty, our current advisor being Prof. Indranil Saha. Since our inception, we have grown in number and ability, undertaking various projects, participating in competitions, and demonstrating our research.
               {/* <div style={{ display: 'flex', justifyContent: 'flex-start', marginTop: '15px' }}>
             <CustomButton3/>
             </div> */}
-            <a
+            {/* <a
               href="https://www.dropbox.com/scl/fi/165w2ovsfg4wlif3zone6/Brochure.pdf?rlkey=wjhej532ayequjvny56ggnpjt&dl=0"
               style={{
                 fontWeight: 'bold',
@@ -187,7 +193,7 @@ const Team_history = () => {
               }}
               >
                 click here.
-            </a>
+            </a> */}
             </motion.p>
           </motion.div>
         <div className='InstaHandle'>
