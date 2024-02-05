@@ -54,7 +54,7 @@ const Hero = () => {
             <section  className="footer-follow" style={{ fontSize: 48, display: 'flex', gap: '20px', marginLeft:'25px' }}>
           <SocialMenu />
           </section>
-            <p className={`${styles.heroSubText} mt-2 text-eerieBlack text-centre`}>
+            {/* <p className={`${styles.heroSubText} mt-2 text-eerieBlack text-centre`}>
               The Rising Of A New ERA <br className="sm:block hidden" />
               <br className="sm:block hidden" />
             <br className="sm:block hidden" />
@@ -64,7 +64,7 @@ const Hero = () => {
             <p className={`mt-2 text eerieBlack text-[1.4vw] items-centre text-centre pl-6`}>
               Team for Autonomous Robotics
             </p>
-            </p>
+            </p> */}
             
             </div>
           <div

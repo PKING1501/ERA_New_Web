@@ -7,8 +7,10 @@ import { services } from '../constants';
 import { styles } from '../styles';
 import { github, pineapple, pineappleHover } from '../assets';
 import { projects } from '../constants';
+import { Particles } from '../components/Particles';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
-import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp';
+// import ArrowBackIosSharpIcon from '@mui/icons-material/ArrowBackIosSharp';
+import Navbar1 from './Navbar1';
 // import CustomButton2 from './Button_Research';
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -160,12 +162,16 @@ const Research = () => {
 
   return (
     <>
+    <Particles/>
     {/* Projects Section */}
-    <div className="absolute top-10 left-5 z-50">
+    <div style={{ position: 'fixed', top: 0, left: 0, right: 0, zIndex: 1000 }}>
+      <Navbar1 />
+    </div>
+    {/* <div className="absolute top-10 left-5 z-50">
       <Link to="/" style={{ position: 'fixed', top: '4.5vh', left: '7.4vw', zIndex: '1000000' }}>
         <ArrowBackIosSharpIcon style={{ color: 'white' }} />
       </Link>
-    </div>
+    </div> */}
     <div id='projects' style={{ position: 'relative', width: '80vw', marginLeft: '0vw', marginTop: '5vh' }}>
         <motion.div variants={textVariant()} className={`${styles.textCenter} flex-col`}>
 

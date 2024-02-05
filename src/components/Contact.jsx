@@ -5,6 +5,7 @@ import { styles } from '../styles';
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
 import { send, sendHover } from '../assets';
+import InstaHandle from './InstaHandle';
 import React,{ useEffect } from 'react';
 
 const Contact = () => {
@@ -158,6 +159,9 @@ const Contact = () => {
           </button>
         </form>
       </motion.div>
+    </div>
+    <div className='InstaHandle'>
+      <InstaHandle/>
     </div>
     </>
   );
