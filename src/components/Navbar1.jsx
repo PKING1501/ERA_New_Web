@@ -14,7 +14,7 @@ const Navbar1 = () => {
     <nav
       className={`${styles.paddingX} w-full flex items-center py-2 fixed 
       top-0 z-20 bg-flashWhite sm:opacity-[0.90] xxs:h-[12vh]`}>
-        <Link to="/" style={{ position: 'fixed', top: '5vh', left: '5vw', zIndex: '1000000' }}>
+        <Link to="/" style={{ position: 'fixed', top: '3.8vh', left: '5vw', zIndex: '1000000' }}>
             <ArrowBackIosNewSharp style={{ color: 'black' }} />
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-4 mt-2" style={{ position: 'fixed', left: '9vw', zIndex: '1000000' }}>
