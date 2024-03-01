@@ -5,6 +5,7 @@ import worldmap from './backgrounds/world-map.png';
 
 import logo from './logo/logo.gif';
 import logotext from './logo/logo-text-black.png';
+import dribble from './projects/Dribblerem.png'
 
 import shaq from './personal/shaq.png';
 import robobg from './backgrounds/robobg.jpg'
@@ -67,6 +68,7 @@ export {
   worldmap,
   logo,
   logotext,
+  dribble,
   shaq,
   robobg,
   backend,

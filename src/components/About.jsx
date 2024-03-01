@@ -4,6 +4,7 @@ import { styles } from '../styles';
 import { services } from '../constants';
 import { fadeIn, textVariant } from '../utils/motion';
 import { SectionWrapper } from '../hoc';
+import { dribble } from '../assets' 
 import CustomButton2 from './Button_Qualification';
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -137,7 +138,7 @@ const About = () => {
     </div>
     <div className="flex flex-col items-end">
         <motion.img
-          src='/src/assets/projects/Dribblerem.png'
+          src={dribble}
           alt="Robo2"
           style={{ width: '40.83vw', height: 'auto',  marginTop: '18.29vh', marginLeft: '-10vw' }} // Adjust the size as needed
           variants={fadeIn('right', 'spring', 0.5, 0.75)}
