@@ -80,7 +80,8 @@ const About = () => {
         3.  <b>Empowering Future Leaders</b>: Empower gifted students through invaluable guidance and mentorship, all while increasing your company's visibility among budding professionals.<br/>
         4.  <b>Digital Dominance</b>: Amplify your online presence across our website and social media channels, magnifying your outreach and forging connections with a broader audience, all through the influential network of Team ERA.
       </motion.p> */}
-
+      <br/>
+      <br/>
       <br/>
     <div className="-mt-[-2rem]">
       <motion.div variants={textVariant()}>
@@ -90,7 +91,7 @@ const About = () => {
       <motion.p
         variants={fadeIn('', '', 0.2, 1)}
         className="mt-4 text-taupe text-[1.250rem] max-w-3xl leading-[1.875rem]">
-          RoboCup Middle Size League (MSL) is an international competition where teams of 5 fully autonomous robots play soccer with a regular-size FIFA soccer ball. The vision of the competition is to reach a level in autonomous robots where a team of fully autonomous robots can win against the most recent FIFA World Cup winner by the year 2050. We aim to be among the first entrants from India and not only compete but win!
+          RoboCup Middle Size League (MSL) is an international competition where teams of 5 fully autonomous robots play soccer with a regular-size FIFA soccer ball. The vision of the competition is to reach a level in autonomous robots where a team of fully autonomous robots can win against the most recent FIFA World Cup winner by the year 2050. We aim to be among the first entrants from India and not only compete but win as undergraduates against teams that comprise a significant number of PG members. This makes our campaign ever more challenging and drives us to work harder than ever.
           {/* <a
           href="https://www.dropbox.com/scl/fi/165w2ovsfg4wlif3zone6/Brochure.pdf?rlkey=wjhej532ayequjvny56ggnpjt&dl=0"
           style={{
@@ -136,9 +137,9 @@ const About = () => {
     </div>
     <div className="flex flex-col items-end">
         <motion.img
-          src='/src/assets/projects/Dribblerem.png'
+          src='/src/assets/projects/Robo2.png'
           alt="Robo2"
-          style={{ width: '40.83vw', height: 'auto',  marginTop: '18.29vh', marginLeft: '-10vw' }} // Adjust the size as needed
+          style={{ width: '20.83vw', height: 'auto',  marginTop: '18.29vh', marginLeft: '5vw' }} // Adjust the size as needed
           variants={fadeIn('right', 'spring', 0.5, 0.75)}
         />
       </div>

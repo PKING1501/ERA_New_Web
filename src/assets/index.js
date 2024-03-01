@@ -7,7 +7,6 @@ import logo from './logo/logo.gif';
 import logotext from './logo/logo-text-black.png';
 
 import shaq from './personal/shaq.png';
-import robobg from './backgrounds/robobg.jpg'
 
 import backend from './icons/backend.png';
 import ux from './icons/ux.png';
@@ -68,7 +67,6 @@ export {
   logo,
   logotext,
   shaq,
-  robobg,
   backend,
   ux,
   frontend,
