@@ -34,7 +34,7 @@ const CustomButton1 = () => {
       onMouseOut={handleHoverOut}
       onClick={() =>
         window.open(
-          'https://www.dropbox.com/scl/fi/165w2ovsfg4wlif3zone6/Brochure.pdf?rlkey=wjhej532ayequjvny56ggnpjt&dl=0',
+          'https://www.canva.com/design/DAGOhAfwSf0/0mRDoO497Mu-Oyv8otnc9A/view?utm_content=DAGOhAfwSf0&utm_campaign=designshare&utm_medium=link&utm_source=editor',
           '_blank'
         )
       }
