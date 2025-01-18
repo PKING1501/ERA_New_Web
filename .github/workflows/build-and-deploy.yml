@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change this if your default branch is different
+      - main  # Change if your branch name is different
 
 jobs:
   deploy:
@@ -28,7 +28,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist  # The folder containing your built files
-
-      - name: Start Server (Optional for local testing)
-        run: npx serve -s dist
+          folder: dist  # Ensure this is the correct folder with your built files
