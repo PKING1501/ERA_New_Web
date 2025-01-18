@@ -3,11 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Runs on push to the main branch
+      - main  # Change this if your default branch is different
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -15,16 +16,19 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # Adjust if needed
+          node-version: 18  # Adjust based on your project requirements
 
-      - name: Install dependencies (with legacy peer deps)
+      - name: Install dependencies
         run: npm i --legacy-peer-deps
 
-      - name: Build the project
-        run: npm run build  # Uses vite build
+      - name: Build project
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: dist  # Vite outputs to 'dist' by default
+          folder: dist  # The folder containing your built files
+
+      - name: Start Server (Optional for local testing)
+        run: npx serve -s dist
