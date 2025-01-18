@@ -1,8 +1,9 @@
 name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
-      - main  # Change this if your default branch is different
+      - main  # Runs on push to the main branch
 
 jobs:
   deploy:
@@ -14,16 +15,16 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18  # Adjust to your project's Node.js version
+          node-version: 18  # Adjust if needed
 
-      - name: Install dependencies
-        run: npm install  # or yarn install
+      - name: Install dependencies (with legacy peer deps)
+        run: npm i --legacy-peer-deps
 
-      - name: Build project
-        run: npm run build  # Adjust based on your framework (Vue: npm run build)
+      - name: Build the project
+        run: npm run build  # Uses vite build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: build  # Change this to 'dist' for Vue
+          folder: dist  # Vite outputs to 'dist' by default
